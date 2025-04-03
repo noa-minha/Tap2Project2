@@ -1,17 +1,53 @@
 <script lang="ts">
 	let name = 'Scuttle';
     let img = '/Profile_-_Scuttle.png'
+
+    import { ShoppingBasket } from 'lucide-svelte';
+    import { HandPlatter } from 'lucide-svelte';
+    import { Calendar } from 'lucide-svelte';
+
+    let order_num = 42;
+
 </script>
 
 <header class="mt-10 mb-12 flex flex-col items-center justify-center text-center">
-    <img class="m-5 rounded-full w-28 h-28 object-top" src={img} alt="Your profile pic" />
+    <img class="m-5 rounded-full w-24 h-24 object-top" src={img} alt="Your profile pic" />
     <h1 class="font-inter font-semi-bold text-3xl object-bottom">Good Morning {name}!</h1>
 </header>
 
+<main>
+
+<div class="flex items-center justify-between mx-auto gap-x-4 w-1/2 ">
+<div class="w-1/2 h-40 flex justify-between gap-x-4">
+    <button class="w-1/2 h-40 bg-[#0358F1] rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
+        <ShoppingBasket class="text-white"/>
+        <p class="font-inter text-xl text-white">Checkout</p>
+    </button>
+
+    <button class="w-1/2 h-40 bg-black rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
+        <HandPlatter class="text-white"/>
+        <p class="font-inter text-xl text-white">Orders</p>
+    </button>
+</div>
+
+<div class="w-1/2 h-40 flex justify-between gap-x-4">
+    <button class="w-1/2 h-40 bg-black rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
+        <Calendar class="text-white" />
+        <p class="font-inter text-xl text-white">Scheduler</p>
+    </button>
+
+    <div class="w-1/2 h-40 bg-white rounded-3xl font-inter flex flex-col items-center justify-center text-center">
+        <p class="">orders today</p>
+        <p class="font-semi-bold text-3xl">{order_num}</p>
+    </div>
+</div>
+
+</div>
 
 <div class="flex flex-col items-center justify-center text-center">
-    hey hey grid stuff
+    hey hey grid stuff2
 </div>
+</main>
 
 <style lang="postcss">
 :global(html) {

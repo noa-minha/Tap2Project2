@@ -9,8 +9,8 @@ module.exports = {
         inter: ['Inter', 'sans-serif'],
       },
       fontWeight: {
-        'extra-light': 100,  // Extra light font weight
-        'semi-bold': 600,    // Semi-bold font weight
+        'extra-light': 100,  
+        'semi-bold': 600,    
       }
     }
   },
