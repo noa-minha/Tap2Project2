@@ -17,7 +17,7 @@
     <h1 class="font-inter font-semi-bold text-3xl object-bottom">Good Morning {name}!</h1>
 </header>
 
-<main>
+<main class="flex flex-col gap-y-4">
     <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto">
         <div class="h-40 gap-4 flex w-1/2 max-w-lg lg:justify-end justify-center">
             <button class="flex-1 min-w-[170px] max-w-[200px] bg-[#0358F1] rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
@@ -44,9 +44,10 @@
         </div>
     </div>
 
-    <div>
-        <div class="bg-white flex-1 min-w-84 max-w-100 h-40">
-
+    <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto">
+        <div class="bg-red-800 h-40 flex flex-1 min-w-[352px] max-w-[416px] rounded-3xl">
+        </div>
+        <div class="bg-blue-800 h-40 flex flex-1 min-w-[352px] max-w-[416px] rounded-3xl">
         </div>
     </div>
 
