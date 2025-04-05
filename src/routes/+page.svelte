@@ -18,8 +18,8 @@
 </header>
 
 <main>
-    <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto bg-blue-500">
-        <div class="h-40 gap-4 flex bg-blue-800 w-1/2 max-w-lg lg:justify-end justify-center">
+    <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto">
+        <div class="h-40 gap-4 flex w-1/2 max-w-lg lg:justify-end justify-center">
             <button class="flex-1 min-w-40 max-w-48 bg-[#0358F1] rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
                 <ShoppingBasket class="text-white"/>
                 <p class="font-inter text-xl text-white">Checkout</p>
@@ -31,7 +31,7 @@
             </button>
         </div>
 
-        <div class="h-40 gap-4 flex bg-red-800 w-1/2 max-w-lg lg:justify-start justify-center">
+        <div class="h-40 gap-4 flex w-1/2 max-w-lg lg:justify-start justify-center">
             <button class="flex-1 min-w-40 max-w-48 bg-black rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
                 <Calendar class="text-white" />
                 <p class="font-inter text-xl text-white">Scheduler</p>
