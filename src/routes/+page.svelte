@@ -6,7 +6,9 @@
     import { HandPlatter } from 'lucide-svelte';
     import { Calendar } from 'lucide-svelte';
 
-    let order_num = 42;
+    let orderNum = 42;
+    let ShiftStart = "16:00";
+    let shiftEnd = "20:00";
 
     let items = ['Hello', 'Banana', 'Ciao']
 
@@ -38,16 +40,31 @@
             </button>
 
             <div class="w-[170px] lg:w-[200px] bg-white rounded-3xl font-inter flex flex-col items-center justify-center text-center">
-                <p class="">orders today</p>
-                <p class="font-semi-bold text-3xl">{order_num}</p>
+                <p>orders today</p>
+                <p class="font-semi-bold text-3xl">{orderNum}</p>
             </div>
         </div>
     </div>
 
-    <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto">
+    <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 justify-center mx-auto">
         <div class="bg-red-800 h-40 flex w-[352px] lg:w-[416px] rounded-3xl">
         </div>
-        <div class="bg-blue-800 h-40 flex w-[352px] lg:w-[416px] rounded-3xl">
+        <div class="bg-white h-40 flex w-[352px] lg:w-[416px] rounded-3xl ">
+            <div class="w-1/2 flex flex-col font-inter m-8 items-start justify-center">
+                <p class="">Today's Shift</p>
+                <p class="font-semi-bold text-3xl">{ShiftStart}</p>
+                <p class="font-semi-bold text-3xl">{shiftEnd}</p>
+            </div>
+            <div class="w-1/2 flex flex-col font-inter mr-2">
+                <p class="m-0.5">Next Shifts</p>
+                <div class="flex flex-col justify-between h-3/4">
+                    <div class="bg-[#DADADA] h-14 rounded-xl">
+
+                    </div>
+                    <div class="bg-[#DADADA] h-14 rounded-xl">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
