@@ -10,6 +10,11 @@
     let ShiftStart = "16:00";
     let shiftEnd = "20:00";
 
+    let nextShiftDay1 = "Wed, 17"
+    let nextShiftTime1 = "17:00-23:00"
+    let nextShiftDay2 = "Fri, 17"
+    let nextShiftTime2 = "12:00-17:00"
+
     let items = ['Hello', 'Banana', 'Ciao']
 
 </script>
@@ -55,13 +60,16 @@
                 <p class="font-semi-bold text-3xl">{ShiftStart}</p>
                 <p class="font-semi-bold text-3xl">{shiftEnd}</p>
             </div>
-            <div class="w-1/2 flex flex-col font-inter mr-2">
-                <p class="m-0.5">Next Shifts</p>
+            <div class="w-3/4 flex flex-col font-inter mr-2">
+                <p class="m-1.5 text-sm text-right self-end">Next Shifts</p>
                 <div class="flex flex-col justify-between h-3/4">
-                    <div class="bg-[#DADADA] h-14 rounded-xl">
-
+                    <div class="bg-[#DADADA] h-14 rounded-xl flex flex-row justify-around items-center text-sm">
+                        <p class="font-semi-bold">{nextShiftDay1}</p>
+                        <p class="text-[#878787]">{nextShiftTime1}</p>
                     </div>
-                    <div class="bg-[#DADADA] h-14 rounded-xl">
+                    <div class="bg-[#DADADA] h-14 rounded-xl flex flex-row justify-around items-center text-sm">
+                        <p class="font-semi-bold">{nextShiftDay2}</p>
+                        <p class="text-[#878787]">{nextShiftTime2}</p>
                     </div>
                 </div>
             </div>
