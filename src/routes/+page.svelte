@@ -45,9 +45,9 @@
     </div>
 
     <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto">
-        <div class="bg-red-800 h-40 flex flex-1 min-w-[352px] max-w-[416px] rounded-3xl">
+        <div class="bg-red-800 h-40 flex w-[352px] lg:w-[416px] rounded-3xl">
         </div>
-        <div class="bg-blue-800 h-40 flex flex-1 min-w-[352px] max-w-[416px] rounded-3xl">
+        <div class="bg-blue-800 h-40 flex w-[352px] lg:w-[416px] rounded-3xl">
         </div>
     </div>
 
