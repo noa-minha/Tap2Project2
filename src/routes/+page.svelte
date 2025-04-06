@@ -18,13 +18,14 @@
     let nextShiftDay2 = "Fri, 17"
     let nextShiftTime2 = "12:00-17:00"
 
-    let weatherWeek = [
-        ["13:00", Cloud],
-        ["14:00", Sun],
-        ["15:00", Sun],
-        ["16:00", Cloud],
-        ["17:00", CloudDrizzle], 
-        ["18:00", CloudDrizzle]]
+    let weather = [
+    { time: "13:00", icon: Cloud },
+    { time: "14:00", icon: Sun },
+    { time: "15:00", icon: Sun },
+    { time: "16:00", icon: Cloud },
+    { time: "17:00", icon: CloudDrizzle },
+    { time: "18:00", icon: CloudDrizzle }
+];
     let temp = "15°C"
 
 </script>
@@ -62,10 +63,18 @@
     </div>
 
     <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 justify-center mx-auto">
-        <div class="bg-white h-40 flex w-[352px] lg:w-[416px] rounded-3xl">
-            {#each weatherWeek as day}
-                <div class="bg-[#DADADA] rounded-2xl justify-around items-center flex flex-1 flex-col m-1">
-                    <p>{day[0]}</p> 
+        <div class="bg-white h-40 flex w-[352px] lg:w-[416px] rounded-3xl p-1 font-inter font-semi-bold text-sm justify-around">
+            {#each weather as {time, icon}, i}
+                <div class="rounded-2xl items-center flex flex-1 flex-col m-1 pt-1 pb-1" 
+                class:bg-[#DADADA]={i === 0}
+                class:bg-white={i !== 0}>
+                    <p class="justify-start" class:text-[#DADADA]={i !== 0}>{time}</p> 
+                    <section class="flex flex-grow flex-col justify-end">
+                    {#if icon}
+                    <svelte:component this={icon} class="w-6 h-6" />
+                    {/if} 
+                    <p>{temp}</p>   
+                    </section>            
                 </div>
             {/each}
         </div>
