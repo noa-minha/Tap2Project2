@@ -6,7 +6,12 @@
     import { CloudDrizzle } from 'lucide-svelte'
     import { Sun } from 'lucide-svelte'
 
+    /* since some of the data is not just fixated text but changing data that comes from a differenc source
+    I tried to mimic it by using variables for the non-static data*/
+
     let name = 'Scuttle'
+    /* I left the picture in static because in order to access it from lib because it would 
+     involve setting up a tool to deal with static assets - I wanted to focus on tailwind and not get into that */
     let img = '/Profile_-_Scuttle.png'
 
     let orderNum = 42;
@@ -36,6 +41,8 @@
 </header>
 
 <main class="flex flex-col gap-y-4">
+
+    <!-- top 4 buttons -->
     <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto">
         <div class="h-40 gap-4 flex">
             <button class="w-[170px] lg:w-[200px] bg-[#0358F1] rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
@@ -62,6 +69,7 @@
         </div>
     </div>
 
+    <!-- bottom shift and weather info panels -->
     <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 justify-center mx-auto">
         <div class="bg-white h-40 flex w-[352px] lg:w-[416px] rounded-3xl p-1 font-inter font-semi-bold text-sm justify-around">
             {#each weather as {time, icon}, i}
@@ -100,6 +108,10 @@
         </div>
     </div>
 </main>
+
+<!-- 
+I'm leaving this one in since even if I take the highest div in the project and color the bg
+using tailwind it still does not color the whole bg -->
 
 <style lang="postcss">
     :global(html) {
