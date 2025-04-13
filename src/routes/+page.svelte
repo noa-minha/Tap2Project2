@@ -2,6 +2,7 @@
     import { ShoppingBasket, HandPlatter, Calendar, Cloud, CloudDrizzle, Sun} from 'lucide-svelte'
 
     import SquareTile from './SquareTile.svelte';
+    import RectContainer from './RectContainer.svelte';
 
     /* since some of the data is not just fixated text but changing data that comes from a differenc source
     I tried to mimic it by using variables for the non-static data*/
@@ -41,7 +42,7 @@
 
     <!-- top 4 buttons -->
     <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto">
-        <div class="h-40 gap-4 flex">
+        <RectContainer bgColor="bg-colors.gray.100">
             <SquareTile bgColor="bg-[#0358F1]">
                 <ShoppingBasket class="text-white"/>
                 <p class="font-inter text-xl text-white">Checkout</p>
@@ -51,9 +52,9 @@
                 <HandPlatter class="text-white"/>
                 <p class="font-inter text-xl text-white">Orders</p>
             </SquareTile>
-        </div>
+        </RectContainer>
 
-        <div class="h-40 gap-4 flex">
+        <RectContainer bgColor="bg-colors.gray.100">
             <SquareTile>
                 <Calendar class="text-white" />
                 <p class="font-inter text-xl text-white">Scheduler</p>
@@ -63,12 +64,12 @@
                 <p>orders today</p>
                 <p class="font-semi-bold text-3xl">{orderNum}</p>
             </SquareTile>
-        </div>
+        </RectContainer>
     </div>
 
     <!-- bottom shift and weather info panels -->
     <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 justify-center mx-auto">
-        <div class="bg-white h-40 flex w-[352px] lg:w-[416px] rounded-3xl p-1 font-inter font-semi-bold text-sm justify-around">
+        <RectContainer gap="gap-0" extra="p-1 font-inter font-semi-bold text-sm justify-around">
             {#each weather as {time, icon}, i}
                 <div class="rounded-2xl items-center flex flex-1 flex-col m-1 pt-1 pb-1" 
                 class:bg-[#DADADA]={i === 0}
@@ -82,8 +83,8 @@
                     </section>            
                 </div>
             {/each}
-        </div>
-        <div class="bg-white h-40 flex w-[352px] lg:w-[416px] rounded-3xl ">
+        </RectContainer>
+        <RectContainer>
             <div class="w-1/2 flex flex-col font-inter m-8 items-start justify-center">
                 <p class="">Today's Shift</p>
                 <p class="font-semi-bold text-3xl">{ShiftStart}</p>
@@ -102,7 +103,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </RectContainer>
     </div>
 </main>
 
