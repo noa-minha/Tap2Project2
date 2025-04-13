@@ -1,10 +1,7 @@
 <script lang="ts">
-    import { ShoppingBasket } from 'lucide-svelte'
-    import { HandPlatter } from 'lucide-svelte'
-    import { Calendar } from 'lucide-svelte'
-    import { Cloud } from 'lucide-svelte'
-    import { CloudDrizzle } from 'lucide-svelte'
-    import { Sun } from 'lucide-svelte'
+    import { ShoppingBasket, HandPlatter, Calendar, Cloud, CloudDrizzle, Sun} from 'lucide-svelte'
+
+    import SquareTile from './SquareTile.svelte';
 
     /* since some of the data is not just fixated text but changing data that comes from a differenc source
     I tried to mimic it by using variables for the non-static data*/
@@ -45,27 +42,27 @@
     <!-- top 4 buttons -->
     <div class="flex lg:flex-row flex-col lg:gap-x-4 gap-y-4 items-center justify-center mx-auto">
         <div class="h-40 gap-4 flex">
-            <button class="w-[170px] lg:w-[200px] bg-[#0358F1] rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
+            <SquareTile bgColor="bg-[#0358F1]">
                 <ShoppingBasket class="text-white"/>
                 <p class="font-inter text-xl text-white">Checkout</p>
-            </button>
+            </SquareTile>
 
-            <button class="w-[170px] lg:w-[200px] bg-black rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
+            <SquareTile>
                 <HandPlatter class="text-white"/>
                 <p class="font-inter text-xl text-white">Orders</p>
-            </button>
+            </SquareTile>
         </div>
 
         <div class="h-40 gap-4 flex">
-            <button class="w-[170px] lg:w-[200px] bg-black rounded-3xl flex flex-col items-start justify-end p-4 gap-2 hover:opacity-75 transition-opacity duration-50">
+            <SquareTile>
                 <Calendar class="text-white" />
                 <p class="font-inter text-xl text-white">Scheduler</p>
-            </button>
+            </SquareTile>
 
-            <div class="w-[170px] lg:w-[200px] bg-white rounded-3xl font-inter flex flex-col items-center justify-center text-center">
+            <SquareTile isButton={false} bgColor="bg-white">
                 <p>orders today</p>
                 <p class="font-semi-bold text-3xl">{orderNum}</p>
-            </div>
+            </SquareTile>
         </div>
     </div>
 
